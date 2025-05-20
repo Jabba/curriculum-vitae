@@ -1,0 +1,138 @@
+\documentclass[11pt, a4paper]{article} 
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[british]{babel}  
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25, tracking=true, letterspace=30]{microtype}  
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+\usepackage{enumitem}        % To redefine spacing in lists
+\setlist{parsep = 0pt, topsep = 0pt, partopsep = 1pt, itemsep = 1pt, leftmargin = 6mm}
+
+\usepackage{FiraSans}        % Change this to use any font, but keep it simple
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{cvblue1}{HTML}{1d3557}
+\definecolor{cvblue2}{HTML}{457b9d}
+
+%%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These are the real workhorses of this template
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
+\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
+\newcommand{\smaller}[1]{{\small$\diamond$\ #1}}
+\newcommand{\headleft}[1]{\vspace*{3ex}\textsc{\textbf{#1}}\par%
+    \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
+\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
+     \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+
+\begin{document}
+
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
+
+\begin{minipage}[t]{0.33\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{cvblue1!80}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-.2ex} % Eliminates the small gap
+\colorbox{cvblue2}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+\raggedright
+\vspace*{2.5ex}
+
+\Large Jasper \textbf{\textsc{van Turnhout}} \normalsize 
+
+\vspace*{0.5ex} % Extra space after the picture
+
+\headleft{Profile Summary}
+Senior Engineer with over 20+ years of expertise in C++, Python, Machine Learning and Computer Vision. Experience in developing cross-platform Computer Vision SDKs, building and managing data pipelines, creating and deploying production-ready software solutions.
+
+\headleft{Contact details}
+\small % To fit more content
+\faIcon{envelope} \href{mailto:jturnhout@gmail.com}{jturnhout@gmail.com}\\
+\faIcon{linkedin} \href{https://linkedin.com/in/jasper-van-turnhout/}{/jasper-van-turnhout}\\
+\faIcon{github} \href{https://github.com/Jabba}{/Jabba}
+\normalsize
+
+\headleft{Personal information}
+\small Citizenship: \textbf{Dutch} \\[0.5ex]
+\small Languages: \textbf{English}, \textbf{Dutch}
+\small City: \textbf{Amsterdam}
+\normalsize
+
+\headleft{Skills}
+\begin{itemize}
+\item Programming Languages: C++, C, Python, Java, Android, JNI, JavaScript, PHP
+\item Frameworks \& Libraries: OpenCV, POCO, OpenVINO, cURL, TensorFlow, Django, Flask, Panda
+\item Databases: MySQL, MongoDB, SQLite
+\item Cloud: AWS, Azure
+\item Tools: Docker, Ansible, Jenkins, Jira, Github, Bitbucket
+\item OS: Ubuntu, Windows, Balena
+\end{itemize} 
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.56\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{2ex}
+
+\headright{Experience}
+\textbf{Senior Engineer} \hfill 2011--2025 \\
+\textit{ThirdSight → Sightcorp → Raydiant (acquisitions)} \\
+\small
+Progressive engineering role across three companies through acquisitions. Specialized in cross-platform Face Analysis technology for Windows, Linux and Android, with native deep learning integration. Contributed to SDK development, product development, CI/CD infrastructure, and system integration within commercial platforms.
+
+\vspace{0.5em}
+
+\textsc{Raydiant} \hfill 2022--2025 \\
+\smaller{Integrated Face Analysis into Raydiant’s Experience Platform. Led AI team and built CI/CD pipelines for the Face Analysis SDK and Toolkit. Develop and iterate over advanced detectors and estimators using modern deep learning frameworks and accelerators.}
+
+\textsc{Sightcorp} \hfill 2013--2022 \\
+\smaller{Engineered native cross-platform SDKs and toolkits for Face Analysis across Windows, Linux, and Android. Applied deep learning and hardware acceleration techniques to optimize performance and accuracy.}
+
+\textsc{ThirdSight} -- Scientific Programmer \hfill 2011--2013 \\
+\smaller{Developed early-stage cross-platform Face Analysis SDKs. Trained and evaluated models for demographics, facial expressions, and head pose estimation using statistical and classic machine learning and computer vision methods.}
+
+\textbf{Interface Designer} \dates{2010--2011} \\
+\textit{Q-Go → RightNow → Oracle (acquisitions)} \\
+Role continued across 3 companies through acquisitions. Core focus: UX/UI design and prototyping for customers of the Q-Go/Rightnow Customer Service.
+
+\textsc{RightNow (formerly Q-Go)} \hfill 2011 \\
+\smaller{Transitioned design and customer tools post-acquisition. Expanded mockups and design standards for new clients in new international markets.}
+
+\textsc{Q-Go} \hfill 2010 \\
+\smaller{Created customer-facing UI mockups and supported sales with frontend prototyping.}
+\is
+
+\textbf{Webmaster} at \textit{ING Lease.}  \dates{2007-2008} \\
+\smaller{Maintaining the Internet sites of ING Lease Europe and the intranet of ING Lease Netherlands.}
+\is
+
+\headright{Education}
+
+\textsc{Master of Science in Artificial Intelligence} \textit{University of Amsterdam}. \dates{2008--2010} \\
+
+\is
+\textsc{Bachelor of Science in Artifical Intelligence} \textit{University of Amsterdam}.  \dates{2003--2007} \\
+
+\headright{Hobbies}
+
+\textit{Synthesizes \& Ableton, Video game development for retro systems (Atari-based), Snowboarding, Hiking}
+\end{minipage}
+
+\end{document}
